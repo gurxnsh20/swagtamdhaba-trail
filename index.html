@@ -1,0 +1,843 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#F7B91B">
+<title>Swagtam Dhaba | Kulcha, Parantha and Thali in Amritsar</title>
+<meta name="description" content="Swagtam Dhaba, Hall Bazar, Amritsar. Authentic kulchas, parathas and thalis at affordable prices. Order or book a table on WhatsApp.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Yatra+One&family=Hind:wght@400;500;600;700&family=Noto+Sans+Gurmukhi:wght@600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --haldi:#F7B91B;
+  --amber:#F39A1E;
+  --sunset:#B85200;
+  --chilli:#B3261E;
+  --ivory:#FFFAEB;
+  --ink:#2E1B0C;
+  --muted:#7A6450;
+  --line:#F0DDB0;
+  --tint:#FFF1CC;
+  --veg:#1E8A3C;
+  --wa:#0F7B3F;
+  --display:'Yatra One','Noto Sans Gurmukhi',Georgia,serif;
+  --body:'Hind',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;
+}
+*{box-sizing:border-box;margin:0}
+[hidden]{display:none!important}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:var(--body);background:var(--ivory);color:var(--ink);line-height:1.45;font-size:16px;padding-bottom:calc(92px + env(safe-area-inset-bottom));-webkit-tap-highlight-color:transparent}
+button,input,textarea{font:inherit;color:inherit}
+button{cursor:pointer}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--ink);outline-offset:2px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 16px}
+.ic{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;flex:none}
+.st{width:16px;height:16px;fill:#E6D9BD;stroke:none;flex:none}
+.st.on{fill:#F0A500}
+
+/* ---------- Hero ---------- */
+.hero{position:relative;background:var(--haldi);padding:22px 0 54px}
+.hero::after{content:"";position:absolute;left:0;right:0;bottom:-14px;height:14px;background:radial-gradient(circle 14px at 14px 0,var(--haldi) 13.5px,transparent 14px) repeat-x;background-size:28px 14px}
+.toplinks{display:none}
+.sign{max-width:520px;margin:18px auto 0;text-align:center;background:var(--ivory);border:3px solid var(--chilli);border-radius:14px;padding:28px 18px 22px;transform:rotate(-1.2deg);box-shadow:inset 0 0 0 5px var(--ivory),inset 0 0 0 7px var(--chilli),0 7px 0 rgba(46,27,12,.2)}
+.sign h1{font-family:var(--display);font-weight:400;font-size:clamp(40px,12.5vw,70px);line-height:1;color:var(--chilli)}
+.sign-pa{font-family:'Noto Sans Gurmukhi',var(--body);font-weight:700;font-size:clamp(20px,6vw,28px);margin-top:8px}
+.sign-sub{margin-top:10px;font-weight:600;color:var(--muted);font-size:15px}
+.tagline{max-width:430px;margin:26px auto 0;text-align:center;font-size:18px;font-weight:500}
+.facts{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin-top:18px}
+.fact{display:inline-flex;align-items:center;gap:6px;background:var(--ivory);padding:7px 13px;border-radius:999px;font-weight:600;font-size:14px}
+.cta{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-top:22px}
+
+/* ---------- Buttons ---------- */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:50px;padding:0 22px;border-radius:14px;border:0;font-weight:700;font-size:16px;text-decoration:none}
+.btn.block{width:100%}
+.btn-dark{background:var(--ink);color:var(--haldi)}
+.btn-line{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 2px var(--ink)}
+.btn-wa{background:var(--wa);color:#fff}
+.btn:disabled{opacity:.5;cursor:not-allowed}
+.link{background:none;border:0;color:var(--sunset);font-weight:600;text-decoration:underline;padding:10px;min-height:44px}
+
+/* ---------- Review highlight band ---------- */
+.band{background:var(--amber);padding:46px 0 34px}
+.band blockquote{max-width:640px;margin:0 auto;text-align:center}
+.band p{font-family:var(--display);font-size:clamp(26px,7vw,40px);line-height:1.15}
+.band footer{margin-top:12px;font-weight:600;font-size:15px}
+
+/* ---------- Section scaffolding ---------- */
+.sec{padding:40px 0 8px;scroll-margin-top:8px}
+.sec-head{margin-bottom:16px}
+.sec-head h2{font-family:var(--display);font-weight:400;font-size:32px;line-height:1.1}
+.sec-head p{color:var(--muted);margin-top:4px;max-width:460px}
+
+/* ---------- Menu ---------- */
+.chips{position:sticky;top:0;z-index:20;display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;background:var(--ivory);padding:calc(10px + env(safe-area-inset-top)) 16px 10px;margin:0 -16px;border-bottom:1px solid var(--line)}
+.chips::-webkit-scrollbar{display:none}
+.chip{flex:none;text-decoration:none;font-weight:600;font-size:15px;padding:8px 16px;border-radius:999px;background:#fff;box-shadow:inset 0 0 0 1.5px var(--line);white-space:nowrap}
+.chip.on{background:var(--ink);color:var(--haldi);box-shadow:none}
+.cats{display:grid;gap:22px;margin-top:20px}
+.cat{background:#fff;border:1.5px solid var(--line);border-radius:20px;overflow:hidden;scroll-margin-top:68px}
+.cat-head{background:var(--haldi);padding:14px 16px 12px}
+.cat-head h3{font-family:var(--display);font-weight:400;font-size:26px;line-height:1.1}
+.notes{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+.notes span{background:var(--ivory);font-size:13px;font-weight:600;padding:3px 10px;border-radius:999px}
+.items{list-style:none;padding:0}
+.item{padding:14px 16px 16px;border-top:1.5px dashed var(--line)}
+.item:first-child{border-top:0}
+.item-top{display:flex;gap:10px;align-items:flex-start}
+.item h4{font-size:18px;font-weight:700;line-height:1.25}
+.desc{font-size:14px;color:var(--muted);margin-top:2px}
+.vegmark{flex:none;width:15px;height:15px;margin-top:5px;border:1.5px solid var(--veg);border-radius:3px;display:grid;place-items:center}
+.vegmark::after{content:"";width:7px;height:7px;border-radius:50%;background:var(--veg)}
+.opts{margin:10px 0 0 25px}
+.opts.n1{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.opts.n2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.opt-price{display:flex;align-items:baseline;gap:8px;color:var(--chilli)}
+.opt-price b{font-size:18px}
+.opt-label{color:var(--muted);font-size:14px;font-weight:600}
+.opt-multi .ctl{margin-top:6px;width:100%}
+.ctl{width:106px;height:38px}
+.add{width:100%;height:100%;border-radius:10px;border:1.5px solid var(--sunset);background:#fff;color:var(--sunset);font-weight:700;font-size:15px}
+.step{display:none;height:100%;grid-template-columns:38px 1fr 38px;align-items:center;text-align:center;background:var(--sunset);color:#fff;border-radius:10px;font-weight:700}
+.step button{height:100%;background:none;border:0;color:#fff;font-size:22px;line-height:1;border-radius:10px}
+.ctl.has .add{display:none}
+.ctl.has .step{display:grid}
+
+/* ---------- Forms ---------- */
+.card{background:#fff;border:1.5px solid var(--line);border-radius:20px;padding:18px 16px 20px}
+.f{display:block;font-weight:600;font-size:14px;margin-top:14px}
+.f:first-child{margin-top:0}
+.inp{display:block;width:100%;min-height:50px;margin-top:6px;padding:11px 14px;border:1.5px solid var(--line);border-radius:12px;background:#fff;font-weight:500;font-size:16px;-webkit-appearance:none;appearance:none}
+textarea.inp{resize:vertical;min-height:76px}
+.inp:focus-visible{outline:3px solid var(--haldi);border-color:var(--sunset)}
+.inp[aria-invalid="true"]{border-color:var(--chilli)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.gstep{display:grid;grid-template-columns:52px 1fr 52px;align-items:center;margin-top:6px;border:1.5px solid var(--line);border-radius:12px;overflow:hidden;text-align:center;font-weight:700;font-size:18px}
+.gstep button{height:50px;border:0;background:var(--tint);font-size:24px;font-weight:600}
+.seg{border:0;padding:0;margin-top:14px;min-width:0}
+.seg legend{font-weight:600;font-size:14px;padding:0}
+.seg .row{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin-top:6px}
+.seg label{position:relative;display:block}
+.seg input{position:absolute;inset:0;opacity:0;cursor:pointer;margin:0}
+.seg span{display:block;text-align:center;padding:12px 4px;border:1.5px solid var(--line);border-radius:12px;background:#fff;font-weight:600;font-size:14px}
+.seg input:checked+span{background:var(--ink);color:var(--haldi);border-color:var(--ink)}
+.seg input:focus-visible+span{outline:3px solid var(--sunset);outline-offset:2px}
+.msg{min-height:22px;margin-top:12px;font-size:14px;font-weight:600}
+.msg.err{color:var(--chilli)}
+.msg.ok{color:var(--wa)}
+.hint{font-size:13px;color:var(--muted);margin-top:10px}
+
+/* ---------- Reviews ---------- */
+.rail{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;margin:0 -16px;padding:4px 16px 14px;scrollbar-width:none}
+.rail::-webkit-scrollbar{display:none}
+.rev{flex:0 0 min(290px,82%);scroll-snap-align:start;background:#fff;border:1.5px solid var(--line);border-radius:20px;padding:16px}
+.rev .stars{display:flex;gap:2px}
+.rev p{margin-top:10px;font-size:16px}
+.rev .who{margin-top:12px;font-weight:700;font-size:14px}
+.rev .src{color:var(--muted);font-weight:500}
+
+/* ---------- Visit ---------- */
+.visit{display:grid;gap:16px}
+.vrow{display:flex;gap:12px;align-items:flex-start}
+.vrow .ic{margin-top:2px;color:var(--sunset)}
+.vrow b{display:block}
+.vrow a.tel{display:inline-block;padding:6px 0;font-weight:600;font-size:18px;text-decoration:none;color:var(--chilli)}
+.foot{padding:34px 0 10px;text-align:center;color:var(--muted);font-size:14px}
+
+/* ---------- Bottom tab bar ---------- */
+.tabbar{position:fixed;left:0;right:0;bottom:0;z-index:40;display:grid;grid-template-columns:repeat(4,1fr);background:#fff;border-top:1.5px solid var(--line);padding-bottom:env(safe-area-inset-bottom)}
+.tabbar a{position:relative;display:flex;flex-direction:column;align-items:center;gap:2px;padding:9px 0 8px;font-size:12px;font-weight:600;color:var(--muted);text-decoration:none}
+.tabbar a.on{color:var(--sunset)}
+.tabbar a.on::before{content:"";position:absolute;top:0;width:34px;height:3px;border-radius:0 0 3px 3px;background:var(--haldi)}
+
+/* ---------- Floating cart ---------- */
+.cartbar{position:fixed;left:12px;right:12px;bottom:calc(72px + env(safe-area-inset-bottom));z-index:45;max-width:460px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:12px;background:var(--ink);color:var(--haldi);border:0;border-radius:14px;padding:13px 16px;font-weight:700;font-size:16px;box-shadow:0 8px 22px rgba(46,27,12,.32)}
+.cartbar:focus-visible{outline-color:var(--sunset)}
+.cartbar .l{display:flex;align-items:center;gap:10px}
+.cartbar.bump{animation:bump .3s}
+@keyframes bump{40%{transform:scale(1.04)}}
+
+/* ---------- Cart sheet ---------- */
+.sheet{position:fixed;inset:0;z-index:60;visibility:hidden;transition:visibility 0s linear .28s}
+.sheet.open{visibility:visible;transition-delay:0s}
+.scrim{position:absolute;inset:0;background:rgba(46,27,12,.55);opacity:0;transition:opacity .25s}
+.sheet.open .scrim{opacity:1}
+.panel{position:absolute;left:0;right:0;bottom:0;max-width:560px;margin:0 auto;max-height:92vh;max-height:92dvh;display:flex;flex-direction:column;background:var(--ivory);border-radius:22px 22px 0 0;transform:translateY(102%);transition:transform .28s cubic-bezier(.2,.8,.2,1)}
+.sheet.open .panel{transform:none}
+.panel-head{display:flex;align-items:center;justify-content:space-between;padding:16px 18px 10px}
+.panel-head h2{font-family:var(--display);font-weight:400;font-size:26px}
+.x{width:44px;height:44px;border-radius:50%;border:0;background:var(--tint);display:grid;place-items:center}
+.panel-body{overflow-y:auto;padding:0 18px calc(22px + env(safe-area-inset-bottom));overscroll-behavior:contain}
+.lines{list-style:none;padding:0;border-top:1.5px dashed var(--line)}
+.row{display:grid;grid-template-columns:1fr auto 64px;gap:10px;align-items:center;padding:12px 0;border-bottom:1.5px dashed var(--line)}
+.row-name b{display:block;font-size:16px;line-height:1.25}
+.row-var{font-size:13px;color:var(--muted);font-weight:600;margin-right:6px}
+.row-unit{font-size:13px;color:var(--muted)}
+.step.small{display:grid;width:104px;height:36px}
+.row-sum{text-align:right;font-weight:700;color:var(--chilli)}
+.total{display:flex;justify-content:space-between;align-items:baseline;padding:14px 0 2px;font-size:20px;font-weight:700}
+.total span:last-child{color:var(--chilli)}
+.empty{text-align:center;padding:26px 0 8px}
+.empty p{margin-bottom:16px;color:var(--muted)}
+
+/* ---------- Larger screens ---------- */
+@media (min-width:860px){
+  body{padding-bottom:96px}
+  .tabbar{display:none}
+  .cartbar{bottom:22px}
+  .toplinks{display:flex;align-items:center;justify-content:space-between}
+  .toplinks .brand{font-family:var(--display);font-size:22px;color:var(--chilli)}
+  .toplinks nav{display:flex;gap:6px;align-items:center}
+  .toplinks a{text-decoration:none;font-weight:600;padding:10px 14px;border-radius:999px}
+  .toplinks a:hover{background:rgba(255,250,235,.6)}
+  .toplinks a.call{background:var(--ink);color:var(--haldi)}
+  .hero{padding-bottom:70px}
+  .items{display:grid;grid-template-columns:1fr 1fr}
+  .item:nth-child(2){border-top:0}
+  .item:nth-child(even){border-left:1.5px dashed var(--line)}
+  .visit{grid-template-columns:1fr 1fr;gap:22px}
+  .rev{flex-basis:300px}
+  .panel{bottom:auto;top:50%;border-radius:22px;transform:translateY(-40%);opacity:0;transition:transform .28s,opacity .2s}
+  .sheet.open .panel{transform:translateY(-50%);opacity:1}
+  .rail{margin:0;padding-left:0;padding-right:0}
+  .chips{margin:0 -16px}
+}
+/* ---------- Floating WhatsApp bubble ---------- */
+.wa-fab{position:fixed;right:14px;bottom:calc(84px + env(safe-area-inset-bottom));z-index:44;width:58px;height:58px;border-radius:50%;background:#25D366;color:#fff;display:grid;place-items:center;text-decoration:none;box-shadow:0 6px 18px rgba(46,27,12,.35);transition:bottom .2s}
+.wa-fab .ic{width:30px;height:30px;stroke-width:2.2}
+.wa-fab:focus-visible{outline-color:var(--ink)}
+body.has-cart .wa-fab{bottom:calc(140px + env(safe-area-inset-bottom))}
+
+/* ---------- Trial watermark (delete the .trial block in the HTML to remove) ---------- */
+.trial{position:fixed;inset:0;z-index:100;pointer-events:none;display:grid;place-items:center;overflow:hidden;user-select:none;-webkit-user-select:none}
+.trial span{font-family:var(--display);font-size:clamp(70px,27vw,230px);line-height:.95;text-align:center;color:var(--ink);opacity:.13;transform:rotate(-24deg);white-space:nowrap}
+@media (min-width:860px){
+  .wa-fab{right:24px;bottom:24px}
+  body.has-cart .wa-fab{bottom:92px}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none!important;transition:none!important}
+}
+</style>
+</head>
+<body>
+
+<!-- Icon sprite -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="i-list" viewBox="0 0 24 24"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></symbol>
+  <symbol id="i-cal" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></symbol>
+  <symbol id="i-bag" viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></symbol>
+  <symbol id="i-nav" viewBox="0 0 24 24"><polygon points="3 11 22 2 13 21 11 13 3 11"/></symbol>
+  <symbol id="i-x" viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></symbol>
+  <symbol id="i-star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></symbol>
+</svg>
+
+<noscript><p style="padding:16px;text-align:center">Please turn on JavaScript to order or book a table. You can also call +91 82648-98930.</p></noscript>
+
+<!-- ===================== HERO ===================== -->
+<header class="hero" id="top">
+  <div class="wrap">
+    <div class="toplinks">
+      <span class="brand">Swagtam Dhaba</span>
+      <nav aria-label="Page sections">
+        <a href="#menu">Menu</a>
+        <a href="#book">Book a table</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#visit">Find us</a>
+        <a class="call" href="tel:+918264898930">Call us</a>
+      </nav>
+    </div>
+
+    <div class="sign">
+      <h1>Swagtam Dhaba</h1>
+      <p class="sign-pa" lang="pa">ਸਵਾਗਤਮ ਢਾਬਾ</p>
+      <p class="sign-sub">Kulcha, Parantha and Thali in Amritsar</p>
+    </div>
+
+    <p class="tagline">Casual Punjabi eatery offering authentic kulchas and parathas at affordable prices.</p>
+
+    <div class="facts">
+      <span class="fact"><svg class="st on" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-star"/></svg>4.3 (185+ reviews)</span>
+      <span class="fact"><svg class="ic" style="width:16px;height:16px" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-clock"/></svg>Open till 11 PM</span>
+      <span class="fact">100% vegetarian</span>
+    </div>
+
+    <div class="cta">
+      <a class="btn btn-dark" href="#menu">Order on WhatsApp</a>
+      <a class="btn btn-line" href="#book">Book a table</a>
+    </div>
+  </div>
+</header>
+
+<!-- ===================== REVIEW HIGHLIGHT ===================== -->
+<section class="band" aria-label="Customer review highlight">
+  <div class="wrap">
+    <blockquote>
+      <p>&ldquo;Best price friendly Restaurant I met in Amritsar&rdquo;</p>
+      <footer>Customer review. Rated 4.3 stars by 185+ guests.</footer>
+    </blockquote>
+  </div>
+</section>
+
+<main>
+<!-- ===================== MENU ===================== -->
+<section class="sec" id="menu" aria-labelledby="menuTitle">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 id="menuTitle">Menu</h2>
+      <p>Tap Add on what you like. Your order goes to us on WhatsApp.</p>
+    </div>
+    <nav class="chips" id="chips" aria-label="Menu categories"></nav>
+    <div class="cats" id="cats"></div>
+  </div>
+</section>
+
+<!-- ===================== BOOK A TABLE ===================== -->
+<section class="sec" id="book" aria-labelledby="bookTitle">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 id="bookTitle">Book a table</h2>
+      <p>Fill in your details and send them to us on WhatsApp. We will reply to confirm.</p>
+    </div>
+    <div class="card">
+      <form id="bookForm" novalidate>
+        <label class="f" for="bName">Your name
+          <input class="inp" id="bName" name="name" type="text" autocomplete="name" placeholder="Full name">
+        </label>
+        <div class="two">
+          <label class="f" for="bDate">Date
+            <input class="inp" id="bDate" name="date" type="date">
+          </label>
+          <label class="f" for="bTime">Time
+            <input class="inp" id="bTime" name="time" type="time">
+          </label>
+        </div>
+        <div class="f" id="gLabel">Number of guests
+          <div class="gstep" role="group" aria-labelledby="gLabel">
+            <button type="button" data-g="-1" aria-label="Fewer guests">&minus;</button>
+            <output id="gCount" aria-live="polite">2</output>
+            <button type="button" data-g="1" aria-label="More guests">+</button>
+          </div>
+        </div>
+        <p class="msg" id="bMsg" role="alert"></p>
+        <button class="btn btn-wa block" type="submit"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-chat"/></svg>Book via WhatsApp</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== REVIEWS ===================== -->
+<section class="sec" id="reviews" aria-labelledby="revTitle">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 id="revTitle">What guests say</h2>
+    </div>
+    <div class="rail" id="rail" tabindex="0" aria-label="Guest reviews, scroll sideways"></div>
+  </div>
+</section>
+
+<!-- ===================== VISIT ===================== -->
+<section class="sec" id="visit" aria-labelledby="visitTitle">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 id="visitTitle">Find us</h2>
+    </div>
+    <div class="card visit">
+      <div class="vrow">
+        <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-pin"/></svg>
+        <div><b>Address</b>Goal Hatti Chowk, Opp. Hotel Ramada, Hall Bazar, Katra Ahluwalia, Amritsar, Punjab 143006</div>
+      </div>
+      <div class="vrow">
+        <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-phone"/></svg>
+        <div><b>Phone</b>
+          <a class="tel" href="tel:+918264898930">+91 82648-98930</a><br>
+          <a class="tel" href="tel:+919888982864">+91 98889-82864</a>
+        </div>
+      </div>
+      <div class="vrow">
+        <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-clock"/></svg>
+        <div><b>Hours</b>Open till 11 PM</div>
+      </div>
+      <div class="vrow">
+        <a class="btn btn-dark" target="_blank" rel="noopener" href="https://maps.app.goo.gl/WuYj9iYRvaRLk5vV9?g_st=ic"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-nav"/></svg>Get directions</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">&copy; <span id="yr"></span> Swagtam Dhaba, Amritsar</div>
+</footer>
+
+<!-- ===================== FLOATING CART ===================== -->
+<button class="cartbar" id="cartBar" type="button" hidden aria-haspopup="dialog">
+  <span class="l"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-bag"/></svg><span id="cbCount">0 items</span></span>
+  <span>View Cart &nbsp;<span id="cbTotal">₹0</span></span>
+</button>
+
+<!-- ===================== BOTTOM TABS ===================== -->
+<nav class="tabbar" aria-label="Main">
+  <a href="#menu" data-tab="menu"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-list"/></svg>Menu</a>
+  <a href="#book" data-tab="book"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-cal"/></svg>Book</a>
+  <a href="#reviews" data-tab="reviews"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-star"/></svg>Reviews</a>
+  <a href="tel:+918264898930"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-phone"/></svg>Call</a>
+</nav>
+
+<!-- ===================== FLOATING WHATSAPP BUBBLE ===================== -->
+<a class="wa-fab" id="waFab" href="#" target="_blank" rel="noopener" aria-label="Chat with Swagtam Dhaba on WhatsApp"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-chat"/></svg></a>
+
+<!-- ===================== TRIAL WATERMARK ===================== -->
+<div class="trial" aria-hidden="true"><span>THIS IS<br>TRIAL</span></div>
+
+<!-- ===================== CART SHEET ===================== -->
+<div class="sheet" id="sheet">
+  <div class="scrim" data-close></div>
+  <section class="panel" id="panel" role="dialog" aria-modal="true" aria-labelledby="cartTitle">
+    <div class="panel-head">
+      <h2 id="cartTitle">Your order</h2>
+      <button class="x" type="button" data-close aria-label="Close cart"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-x"/></svg></button>
+    </div>
+    <div class="panel-body">
+      <div class="empty" id="cartEmpty" hidden>
+        <p>Your cart is empty. Pick something from the menu to get started.</p>
+        <button class="btn btn-dark" type="button" data-close data-goto="#menu">Browse menu</button>
+      </div>
+
+      <div id="cartFull">
+        <ul class="lines" id="cartLines"></ul>
+        <div class="total"><span>Total</span><span id="sheetTotal">₹0</span></div>
+        <p class="hint">Packing charge Rs 10/- extra for takeaway and delivery. Rs 20/- extra for Butter Thali. We add these when we confirm your order.</p>
+
+        <form id="orderForm" novalidate>
+          <label class="f" for="oName">Your name
+            <input class="inp" id="oName" type="text" autocomplete="name" placeholder="Full name">
+          </label>
+
+          <fieldset class="seg">
+            <legend>How would you like your order?</legend>
+            <div class="row">
+              <label><input type="radio" name="otype" value="dine" checked><span>Dine in</span></label>
+              <label><input type="radio" name="otype" value="takeaway"><span>Takeaway</span></label>
+              <label><input type="radio" name="otype" value="delivery"><span>Delivery</span></label>
+            </div>
+          </fieldset>
+
+          <label class="f" for="oTable" id="fTable">Table number
+            <input class="inp" id="oTable" type="text" inputmode="text" placeholder="For example, 4">
+          </label>
+          <label class="f" for="oAddr" id="fAddr" hidden>Delivery address
+            <textarea class="inp" id="oAddr" rows="2" autocomplete="street-address" placeholder="House number, street, landmark"></textarea>
+          </label>
+
+          <label class="f" for="oNote">Special instructions (optional)
+            <input class="inp" id="oNote" type="text" placeholder="Less spicy, extra butter...">
+          </label>
+
+          <p class="msg" id="oMsg" role="alert"></p>
+          <button class="btn btn-wa block" id="placeOrder" type="submit"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-chat"/></svg>Place Order via WhatsApp</button>
+          <div style="text-align:center"><button class="link" id="clearCart" type="button">Clear cart</button></div>
+        </form>
+      </div>
+    </div>
+  </section>
+</div>
+
+<script>
+(() => {
+  'use strict';
+
+  /* ================= CONFIG ================= */
+  const WA_NUMBER = '918264898930';           // WhatsApp number, country code first, no + or spaces
+  const CART_KEY  = 'swagtam_cart_v1';
+  const NAME_KEY  = 'swagtam_name_v1';
+
+  /* ================= MENU DATA ================= */
+  const MENU = [
+    { id:'thali', name:'Thali', notes:['Rs 20/- Extra for Butter Thali','Packing Charge Rs 10/- Extra'], items:[
+      { id:'parantha-thali', name:'Parantha Thali', desc:'Dal + Paneer + Rice + Salad + 1 Lacha Parantha', opts:[{price:70}] },
+      { id:'roti-thali',     name:'Roti Thali',     desc:'Dal + Paneer + Rice + Salad + 3 Roti',            opts:[{price:80}] },
+      { id:'kadhi-chawal',   name:'Kadhi Chawal',   desc:'',                                                opts:[{price:80}] },
+      { id:'veg-thali',      name:'Veg. Thali',     desc:'Sabzi + Paneer + Dahi + Salad + 3 Roti',          opts:[{price:90}] },
+      { id:'rice-thali',     name:'Rice Thali',     desc:'Dal + Paneer + Full Plate Rice + Salad',          opts:[{price:100}] },
+      { id:'punjabi-thali',  name:'Punjabi Thali',  desc:'Kadhi Pakora + Mix Veg + Paneer + Rice + Salad + 2 Lachha Parantha', opts:[{price:150}] }
+    ]},
+    { id:'kulcha', name:'Kulcha', notes:[], items:[
+      { id:'aloo-pyaz-kulcha', name:'Aloo Pyaz Kulcha', desc:'', opts:[{price:50}] },
+      { id:'mix-kulcha',       name:'Mix Kulcha',       desc:'', opts:[{price:60}] },
+      { id:'onion-kulcha',     name:'Onion Kulcha',     desc:'', opts:[{price:80}] },
+      { id:'gobhi-kulcha',     name:'Gobhi Kulcha',     desc:'', opts:[{price:70}] },
+      { id:'spl-big-kulcha',   name:'Spl. Big Kulcha',  desc:'', opts:[{price:70}] },
+      { id:'paneer-kulcha',    name:'Paneer Kulcha',    desc:'', opts:[{price:90}] }
+    ]},
+    { id:'main', name:'Main Course', notes:[], items:[
+      { id:'dal-tadka',    name:'Dal Tadka',    desc:'', opts:[{label:'Half',price:50},{label:'Full',price:80}] },
+      { id:'kadhi-pakora', name:'Kadhi Pakora', desc:'', opts:[{label:'Half',price:50},{label:'Full',price:80}] },
+      { id:'kadai-paneer', name:'Kadai Paneer', desc:'', opts:[{label:'Half',price:80},{label:'Full',price:150}] },
+      { id:'mix-veg',      name:'Mix Veg',      desc:'', opts:[{label:'Half',price:50},{label:'Full',price:80}] },
+      { id:'paneer-bhurji',name:'Paneer Bhurji',desc:'', opts:[{label:'Half',price:120},{label:'Full',price:200}] },
+      { id:'aloo-jeera',   name:'Aloo Jeera',   desc:'', opts:[{price:80}] },
+      { id:'boondi-raita', name:'Boondi Raita', desc:'', opts:[{price:50}] },
+      { id:'rice',         name:'Rice',         desc:'', opts:[{label:'Half',price:50},{label:'Full',price:80}] }
+    ]},
+    { id:'breads', name:'Breads', notes:[], items:[
+      { id:'roti',          name:'Roti',          desc:'', opts:[{price:10}] },
+      { id:'butter-roti',   name:'Butter Roti',   desc:'', opts:[{price:15}] },
+      { id:'lacha-parantha',name:'Lacha Parantha',desc:'', opts:[{price:40}] },
+      { id:'butter-nan',    name:'Butter Nan',    desc:'', opts:[{price:50}] }
+    ]},
+    { id:'drinks', name:'Drinks & Sweets', notes:[], items:[
+      { id:'water',       name:'Water',              desc:'', opts:[{price:20}] },
+      { id:'lassi',       name:'Lassi',              desc:'', opts:[{price:50}] },
+      { id:'cold-drink',  name:'Cold Drink',         desc:'', opts:[{price:40}] },
+      { id:'gulab-jamun', name:'Gulab Jamun (2pcs)', desc:'', opts:[{price:20}] }
+    ]}
+  ];
+
+  const REVIEWS = [
+    { name:'Gurpreet Singh', stars:4, text:'Amazing chole with dahi brings it to next level. Genuine pricing with good ambience.' },
+    { name:'Guido Almstedt', stars:5, text:'Very economical and tasty. Extra cucumber salad and one extra roti was given.' },
+    { name:'A. Star',        stars:5, text:'Lovely people, delicious food in a small and intimate setting. All the local eat here.' },
+    { name:'Ellie Machan',   stars:5, text:'Parantha thali was delicious, not too spicy.' },
+    { name:'Siddhi Dalvi',   stars:5, text:'Good food. The sitting downstairs is good. In all, wholesome good food.' }
+  ];
+
+  /* ================= HELPERS ================= */
+  const $  = (s, r = document) => r.querySelector(s);
+  const $$ = (s, r = document) => Array.from(r.querySelectorAll(s));
+  const money = n => '₹' + Number(n).toLocaleString('en-IN');
+  const esc = s => String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  const store = {
+    get(k){ try { return localStorage.getItem(k); } catch(e){ return null; } },
+    set(k,v){ try { localStorage.setItem(k,v); } catch(e){} }
+  };
+
+  /* ================= BUILD MENU ================= */
+  const LINES = new Map();   // key -> { key, name, label, price }
+
+  const ctlHTML = (key, full) => `
+    <div class="ctl" data-key="${key}">
+      <button type="button" class="add" data-a="inc" data-key="${key}" aria-label="Add ${esc(full)} to cart">Add</button>
+      <div class="step" role="group" aria-label="${esc(full)} quantity">
+        <button type="button" data-a="dec" data-key="${key}" aria-label="Remove one ${esc(full)}">&minus;</button>
+        <output data-qty aria-live="polite">0</output>
+        <button type="button" data-a="inc" data-key="${key}" aria-label="Add one more ${esc(full)}">+</button>
+      </div>
+    </div>`;
+
+  function buildMenu(){
+    $('#chips').innerHTML = MENU.map(c => `<a class="chip" href="#cat-${c.id}" data-cat="${c.id}">${esc(c.name)}</a>`).join('');
+
+    $('#cats').innerHTML = MENU.map(cat => {
+      const items = cat.items.map(it => {
+        const multi = it.opts.length > 1;
+        const opts = it.opts.map(o => {
+          const key  = it.id + (o.label ? '-' + o.label.toLowerCase() : '');
+          const full = o.label ? `${it.name} (${o.label})` : it.name;
+          LINES.set(key, { key, name: it.name, label: o.label || '', price: o.price });
+          return `<div class="opt ${multi ? 'opt-multi' : ''}">
+            <div class="opt-price">${o.label ? `<span class="opt-label">${o.label}</span>` : ''}<b>${money(o.price)}</b></div>
+            ${ctlHTML(key, full)}
+          </div>`;
+        }).join('');
+        return `<li class="item">
+          <div class="item-top">
+            <span class="vegmark" role="img" aria-label="Vegetarian"></span>
+            <div><h4>${esc(it.name)}</h4>${it.desc ? `<p class="desc">${esc(it.desc)}</p>` : ''}</div>
+          </div>
+          <div class="opts n${it.opts.length}">${opts}</div>
+        </li>`;
+      }).join('');
+      const notes = cat.notes.length ? `<div class="notes">${cat.notes.map(n => `<span>${esc(n)}</span>`).join('')}</div>` : '';
+      return `<section class="cat" id="cat-${cat.id}" aria-labelledby="h-${cat.id}">
+        <div class="cat-head"><h3 id="h-${cat.id}">${esc(cat.name)}</h3>${notes}</div>
+        <ul class="items">${items}</ul>
+      </section>`;
+    }).join('');
+  }
+
+  function buildReviews(){
+    const stars = n => Array.from({length:5}, (_, i) => `<svg class="st ${i < n ? 'on' : ''}" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-star"/></svg>`).join('');
+    $('#rail').innerHTML = REVIEWS.map(r => `
+      <article class="rev">
+        <div class="stars" role="img" aria-label="${r.stars} out of 5 stars">${stars(r.stars)}</div>
+        <p>${esc(r.text)}</p>
+        <div class="who">${esc(r.name)} <span class="src">on Google</span></div>
+      </article>`).join('');
+  }
+
+  /* ================= CART STATE ================= */
+  let cart = {};  // key -> qty
+  try {
+    const saved = JSON.parse(store.get(CART_KEY) || '{}');
+    for (const k in saved) if (LINES.has(k) && saved[k] > 0) cart[k] = Math.min(99, saved[k] | 0);
+  } catch(e){ cart = {}; }
+
+  const cartLines = () => Array.from(LINES.keys()).filter(k => cart[k]).map(k => ({ ...LINES.get(k), qty: cart[k] }));
+  const totals = () => cartLines().reduce((t, l) => ({ count: t.count + l.qty, sum: t.sum + l.qty * l.price }), { count:0, sum:0 });
+
+  function change(key, d){
+    if (!LINES.has(key)) return;
+    const q = Math.max(0, Math.min(99, (cart[key] || 0) + d));
+    if (q) cart[key] = q; else delete cart[key];
+    store.set(CART_KEY, JSON.stringify(cart));
+    render(true);
+  }
+
+  /* ================= RENDER ================= */
+  const cartBar = $('#cartBar');
+  let ctls = [];
+
+  function render(bump){
+    // menu controls
+    ctls.forEach(el => {
+      const q = cart[el.dataset.key] || 0;
+      el.classList.toggle('has', q > 0);
+      $('[data-qty]', el).textContent = q;
+    });
+
+    const { count, sum } = totals();
+
+    // floating bar
+    cartBar.hidden = count === 0;
+    document.body.classList.toggle('has-cart', count > 0);
+    $('#cbCount').textContent = count + (count === 1 ? ' item' : ' items');
+    $('#cbTotal').textContent = money(sum);
+    if (bump && count) { cartBar.classList.remove('bump'); void cartBar.offsetWidth; cartBar.classList.add('bump'); }
+
+    // sheet
+    $('#cartEmpty').hidden = count > 0;
+    $('#cartFull').hidden  = count === 0;
+    $('#cartTitle').textContent = count ? `Your order (${count} ${count === 1 ? 'item' : 'items'})` : 'Your order';
+    $('#sheetTotal').textContent = money(sum);
+    $('#cartLines').innerHTML = cartLines().map(l => `
+      <li class="row">
+        <div class="row-name"><b>${esc(l.name)}</b>${l.label ? `<span class="row-var">${l.label}</span>` : ''}<span class="row-unit">${money(l.price)} each</span></div>
+        <div class="step small" role="group" aria-label="${esc(l.name)} quantity">
+          <button type="button" data-a="dec" data-key="${l.key}" aria-label="Remove one ${esc(l.name)}">&minus;</button>
+          <output>${l.qty}</output>
+          <button type="button" data-a="inc" data-key="${l.key}" aria-label="Add one more ${esc(l.name)}">+</button>
+        </div>
+        <span class="row-sum">${money(l.price * l.qty)}</span>
+      </li>`).join('');
+
+    if (count === 0 && sheet.classList.contains('open')) { /* keep sheet open to show empty state */ }
+  }
+
+  /* ================= CLICK HANDLING (menu + cart steppers) ================= */
+  document.addEventListener('click', e => {
+    const b = e.target.closest('[data-a]');
+    if (!b) return;
+    const wasEmpty = !(cart[b.dataset.key]);
+    const isAdd = b.classList.contains('add');
+    change(b.dataset.key, b.dataset.a === 'inc' ? 1 : -1);
+    if (isAdd && wasEmpty) {
+      const plus = $('.step [data-a="inc"]', b.closest('.ctl'));
+      if (plus) plus.focus({ preventScroll: true });
+    }
+  });
+
+  /* ================= CART SHEET ================= */
+  const sheet = $('#sheet'), panel = $('#panel');
+  let lastFocus = null;
+
+  function openSheet(){
+    lastFocus = document.activeElement;
+    $('#oMsg').textContent = ''; $('#oMsg').className = 'msg';
+    sheet.classList.add('open');
+    document.body.style.overflow = 'hidden';
+    setTimeout(() => { const x = $('.x', panel); if (x) x.focus({ preventScroll: true }); }, 30);
+  }
+  function closeSheet(){
+    sheet.classList.remove('open');
+    document.body.style.overflow = '';
+    if (lastFocus && lastFocus.focus) lastFocus.focus({ preventScroll: true });
+  }
+  cartBar.addEventListener('click', openSheet);
+  sheet.addEventListener('click', e => {
+    const c = e.target.closest('[data-close]');
+    if (!c) return;
+    closeSheet();
+    if (c.dataset.goto) { const t = $(c.dataset.goto); if (t) t.scrollIntoView(); }
+  });
+  document.addEventListener('keydown', e => {
+    if (!sheet.classList.contains('open')) return;
+    if (e.key === 'Escape') { closeSheet(); return; }
+    if (e.key === 'Tab') {
+      const f = $$('button, input, textarea, a[href]', panel).filter(x => !x.disabled && x.offsetParent !== null);
+      if (!f.length) return;
+      const first = f[0], last = f[f.length - 1];
+      if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+      else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+    }
+  });
+
+  // order type switching
+  function orderType(){ return $('input[name="otype"]:checked').value; }
+  function syncType(){
+    const t = orderType();
+    $('#fTable').hidden = t !== 'dine';
+    $('#fAddr').hidden  = t !== 'delivery';
+  }
+  $$('input[name="otype"]').forEach(r => r.addEventListener('change', syncType));
+
+  $('#clearCart').addEventListener('click', () => {
+    cart = {}; store.set(CART_KEY, '{}'); render();
+  });
+
+  /* ================= WHATSAPP ================= */
+  function openWhatsApp(text){
+    const a = document.createElement('a');
+    a.href = 'https://wa.me/' + WA_NUMBER + '?text=' + encodeURIComponent(text);
+    a.target = '_blank';
+    a.rel = 'noopener';
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
+  }
+
+  function fail(el, box, text){
+    box.className = 'msg err';
+    box.textContent = text;
+    if (el) { el.setAttribute('aria-invalid', 'true'); el.focus(); }
+  }
+  function clearInvalid(form){ $$('[aria-invalid]', form).forEach(x => x.removeAttribute('aria-invalid')); }
+
+  // ----- Order -----
+  $('#orderForm').addEventListener('submit', e => {
+    e.preventDefault();
+    const form = e.currentTarget, box = $('#oMsg');
+    clearInvalid(form); box.className = 'msg'; box.textContent = '';
+
+    const lines = cartLines();
+    if (!lines.length) { fail(null, box, 'Your cart is empty. Add something from the menu first.'); return; }
+
+    const name = $('#oName').value.trim();
+    const type = orderType();
+    const table = $('#oTable').value.trim();
+    const addr = $('#oAddr').value.trim();
+    const note = $('#oNote').value.trim();
+
+    if (!name) return fail($('#oName'), box, 'Please enter your name.');
+    if (type === 'dine' && !table) return fail($('#oTable'), box, 'Please enter your table number.');
+    if (type === 'delivery' && !addr) return fail($('#oAddr'), box, 'Please enter your delivery address.');
+
+    store.set(NAME_KEY, name);
+    const { sum } = totals();
+    const typeLabel = { dine:'Dine in', takeaway:'Takeaway', delivery:'Delivery' }[type];
+
+    let msg = '*New Order | Swagtam Dhaba*\n\n';
+    msg += '*Name:* ' + name + '\n';
+    msg += '*Order type:* ' + typeLabel + '\n';
+    if (type === 'dine') msg += '*Table number:* ' + table + '\n';
+    if (type === 'delivery') msg += '*Delivery address:* ' + addr + '\n';
+    msg += '\n*Items*\n';
+    lines.forEach((l, i) => {
+      const nm = l.name + (l.label ? ' (' + l.label + ')' : '');
+      msg += (i + 1) + '. ' + nm + ' x ' + l.qty + ' = ' + money(l.price * l.qty) + '\n';
+    });
+    msg += '\n*Total: ' + money(sum) + '*\n';
+    if (type !== 'dine') msg += '(Packing charge Rs 10/- extra)\n';
+    if (note) msg += '\n*Note:* ' + note + '\n';
+    msg += '\nPlease confirm my order. Thank you!';
+
+    openWhatsApp(msg);
+    box.className = 'msg ok';
+    box.textContent = 'WhatsApp is opening. Press send there to place your order.';
+  });
+
+  // ----- Booking -----
+  const pad = n => String(n).padStart(2, '0');
+  const todayStr = () => { const d = new Date(); return d.getFullYear() + '-' + pad(d.getMonth() + 1) + '-' + pad(d.getDate()); };
+  const fmtTime = t => { const [h, m] = t.split(':').map(Number); return ((h % 12) || 12) + ':' + pad(m) + ' ' + (h >= 12 ? 'PM' : 'AM'); };
+  const fmtDate = s => { const [y, m, d] = s.split('-').map(Number); return new Date(y, m - 1, d).toLocaleDateString('en-IN', { weekday:'short', day:'numeric', month:'short', year:'numeric' }); };
+
+  let guests = 2;
+  const gCount = $('#gCount');
+  $$('[data-g]').forEach(b => b.addEventListener('click', () => {
+    guests = Math.max(1, Math.min(30, guests + Number(b.dataset.g)));
+    gCount.textContent = guests;
+  }));
+
+  $('#bDate').min = todayStr();
+
+  $('#bookForm').addEventListener('submit', e => {
+    e.preventDefault();
+    const form = e.currentTarget, box = $('#bMsg');
+    clearInvalid(form); box.className = 'msg'; box.textContent = '';
+
+    const name = $('#bName').value.trim();
+    const date = $('#bDate').value;
+    const time = $('#bTime').value;
+
+    if (!name) return fail($('#bName'), box, 'Please enter your name.');
+    if (!date) return fail($('#bDate'), box, 'Please choose a date.');
+    if (date < todayStr()) return fail($('#bDate'), box, 'That date has passed. Please choose today or a later date.');
+    if (!time) return fail($('#bTime'), box, 'Please choose a time.');
+    if (time > '23:00') return fail($('#bTime'), box, 'We are open till 11 PM. Please choose an earlier time.');
+    if (date === todayStr()) {
+      const n = new Date();
+      if (time <= pad(n.getHours()) + ':' + pad(n.getMinutes())) return fail($('#bTime'), box, 'That time has passed. Please choose a later time today.');
+    }
+
+    store.set(NAME_KEY, name);
+    let msg = '*Table Booking | Swagtam Dhaba*\n\n';
+    msg += '*Name:* ' + name + '\n';
+    msg += '*Date:* ' + fmtDate(date) + '\n';
+    msg += '*Time:* ' + fmtTime(time) + '\n';
+    msg += '*Guests:* ' + guests + '\n\n';
+    msg += 'Please confirm my table. Thank you!';
+
+    openWhatsApp(msg);
+    box.className = 'msg ok';
+    box.textContent = 'WhatsApp is opening. Press send there to request your table.';
+  });
+
+  /* ================= NAV HIGHLIGHTS ================= */
+  function observeSections(){
+    if (!('IntersectionObserver' in window)) return;
+    const tabs = $$('.tabbar a[data-tab]');
+    const io = new IntersectionObserver(entries => {
+      entries.forEach(en => {
+        if (en.isIntersecting) tabs.forEach(a => a.classList.toggle('on', a.dataset.tab === en.target.id));
+      });
+    }, { rootMargin: '-40% 0px -55% 0px' });
+    ['top', 'menu', 'book', 'reviews', 'visit'].forEach(id => { const el = document.getElementById(id); if (el) io.observe(el); });
+
+    const chips = $$('.chip'), bar = $('#chips');
+    const cio = new IntersectionObserver(entries => {
+      entries.forEach(en => {
+        if (!en.isIntersecting) return;
+        const id = en.target.id.replace('cat-', '');
+        chips.forEach(c => {
+          const on = c.dataset.cat === id;
+          c.classList.toggle('on', on);
+          if (on) bar.scrollTo({ left: c.offsetLeft - (bar.clientWidth - c.clientWidth) / 2, behavior: 'smooth' });
+        });
+      });
+    }, { rootMargin: '-35% 0px -60% 0px' });
+    $$('.cat').forEach(c => cio.observe(c));
+  }
+
+  /* ================= INIT ================= */
+  buildMenu();
+  buildReviews();
+  ctls = $$('.ctl');
+  const savedName = store.get(NAME_KEY);
+  if (savedName) { $('#oName').value = savedName; $('#bName').value = savedName; }
+  $('#yr').textContent = new Date().getFullYear();
+  $('#waFab').href = 'https://wa.me/' + WA_NUMBER + '?text=' + encodeURIComponent('Hello Swagtam Dhaba, I have a question.');
+  syncType();
+  render();
+  observeSections();
+})();
+</script>
+</body>
+</html>
